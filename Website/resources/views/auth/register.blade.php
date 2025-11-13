@@ -46,6 +46,15 @@
                 </div>
             @endif
 
+            <!-- Role Selection -->
+<div class="mt-4">
+    <x-label for="role" :value="__('Register as')" />
+    <select id="role" name="role" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm">
+        <option value="{{ \App\Models\User::ROLE_CUSTOMER }}">{{ __('Customer') }}</option>
+        <option value="{{ \App\Models\User::ROLE_PROVIDER }}">{{ __('Provider') }}</option>
+    </select>
+</div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
